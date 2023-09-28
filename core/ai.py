@@ -45,9 +45,8 @@ def load_llm() -> OpenAI:
     This function loads the OpenAI LLM
     """
     llm = OpenAI(
-        model="gpt-4",
         openai_api_key=OPENAI_API_KEY,
-        temperature=0.1,
+        temperature=0.4,
     )
     return llm
 
