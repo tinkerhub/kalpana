@@ -1,4 +1,4 @@
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter, SpacyTextSplitter
 from langchain.document_loaders import (
     PyPDFLoader, 
     DirectoryLoader, 
@@ -36,12 +36,10 @@ def get_tinkerhub_docs(tinkerhub_urls):
     for url in tinkerhub_urls:
         loader = UnstructuredURLLoader([url])
         documents = loader.load()
-        splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=50
-        )
+        splitter = SpacyTextSplitter()
         texts = splitter.split_documents(documents)
         docs.extend(texts)
+    print(docs)
     return docs
 
 def get_txt_docs():
@@ -79,6 +77,7 @@ def get_pdf_docs():
             loader_cls=PyPDFLoader
         )
         documents = loader.load()
+        print(documents[0])
         splitter = RecursiveCharacterTextSplitter(
             chunk_size=500,
             chunk_overlap=50
