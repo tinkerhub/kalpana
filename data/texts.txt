@@ -47,7 +47,7 @@ additional Rs. 5 Lakhs upon utilisation of the Rs. 7 Lakhs Productization Grant.
 Eligibility
 For Idea Grant, an innovator should be based in and out of Kerala. Company incorporation and KSUM unique ID are mandatory for the fund disbursement process.
 For all other grants, the Startup should be completed Company Incorporation process and KSUM unique ID Certification
-For more information: Link
+For more information: https://startupmission.kerala.gov.in/schemes/innovation-grant
 
  1.2. Seed Fund For Women Entrepreneurs Overview:
 The Seed Fund for Women Entrepreneurs is a scheme operated by KSUM to provide financial assistance to startups, with a focus on fostering the formation and development of innovative, technology-based business enterprises. This initiative aims to stimulate the economy of the State of Kerala by helping innovative startups to grow, increasing employment opportunities, and generate more revenue. An important feature of this scheme is the extension of the moratorium period for upto two years.
@@ -59,7 +59,7 @@ working in trade and commerce.
 ● Startups shouldn’t have any pending dues with government agencies, KSUM, or other state incubators.
 ● Startups should not be blacklisted by any government agency in India.
 ● Director of the startup with a CIBIL Score of preferably more than 750.
-For more information: Link
+For more information: https://startupmission.kerala.gov.in/schemes/women/seed-fund
 
  1.3. Soft Loan Against PO For Women Entrepreneurs Overview:
 Kerala Startup Mission (KSUM) supports women startups with a soft loan scheme for an amount limited to Rs.15 Lakhs as working capital for implementing works and projects received from the Govt. departments and the Public Sector Undertakings in Kerala. The amount of loan is limited to 80% of the Purchase order and disbursement is as an advance against the milestone payment agreed by the client. The soft loan will have 6% simple interest and must be repaid in 1 year or on completion of the project with full settlement, whichever is earlier. The repayment period of the loan is 1 year or completion of the project with full settlement, whichever is earlier. The startup shall ensure the proper delivery of the product service specified in the purchase order and the disbursement from the second instalment will be based on satisfactory completion of a milestone as certified by the client. The maximum amount of loan outstanding will be Rs. 15 Lakhs.
@@ -70,7 +70,7 @@ Eligibility :
 4. The start-ups shall not have any other pending dues with any of the Govt. agencies, KSUM, other incubators in the state and shall not be blacklisted by any Govt. agency in India.
 5. The startup director should have a good CIBIL Score, preferably more than 750.
 6. The client shall be a Govt. Department or Public Sector Undertaking.
-For more information: Link
+For more information: https://startupmission.kerala.gov.in/schemes/women/po-soft-loan
 
  1.4. Technology Commercialization Support Overview:
 Technology License / Transfer support for Startups a maximum of Rs. 10 Lakhs. However, the support is limited to 90% of the technology fee to be paid to the Research entity.
@@ -88,7 +88,7 @@ Eligibility Criteria:
 INC 22A status before fund disbursements.
 ● No Pending Dues: Startups should have no outstanding dues with Government agencies, KSUM, or other incubators in the state.
 Must not be blacklisted by any Indian Government agency.
-● CIBIL Score: The startup director should possess a good CIBIL Score, preferably exceeding 750.For more information: Link
+● CIBIL Score: The startup director should possess a good CIBIL Score, preferably exceeding 750.For more information: https://startupmission.kerala.gov.in/schemes/technology-commercialisation
 
  
  2. SCHEMES UNDER MSME
@@ -109,7 +109,7 @@ turnover data.
 benefits restricted to Priority Sector Lending.
 - Inclusion of Urban Street Vendors: Street Vendors were included as Retail Trades under MSMEs from 2nd August, 2021.
 Eligibility:
-Udyam Registration is open to all Micro, Small, and Medium Enterprises (MSMEs) in India. For more details: Link
+Udyam Registration is open to all Micro, Small, and Medium Enterprises (MSMEs) in India. For more details: https://udyamregistration.gov.in/Government-India/Ministry-MSME-registration.htm
 
 
  2.2. Prime Minister’s Employment Generation Programme (PMEGP) Overview:
@@ -150,7 +150,7 @@ All Categories
 2) The maximum cost of the project/unit admissible for Margin Money subsidy under the Business/Service sector for upgradation is Rs. 25 Lakh. Maximum subsidy would be Rs.3.75 lakh (Rs.5 lakh for NER and Hill States).
 3) The balance amount (excluding the own contribution)of the total project cost will be provided by Banks.
 4) If the total project cost exceeds Rs. 1.00 Crore or Rs. 25.00 Lakhs for Manufacturing and Service/Business sector respectively, the balance amount may be provided by
-For eligibility criteria and other info : Link For more info : Link
+For eligibility criteria and other info : https://www.kviconline.gov.in/pmegpeportal/dashboard/notification/PMEGP_Guidelines_Certified_2022_3.pdf For more info : https://www.kviconline.gov.in/pmegpeportal
 
  2.3. Credit Guarantee on Loans to MSMEs & New Entrepreneurs Overview:
 CGTMSE is a government-backed scheme aimed at promoting entrepreneurship by providing credit guarantees for Micro, Small, and Service Enterprises (MSEs). It ensures easier access to loans by offering credit guarantees for amounts up to Rs. 2.00 crore, without the need for collateral or third-party guarantees.
@@ -163,7 +163,7 @@ guarantee cover is 50% of the sanctioned amount.
 - Micro and Small Enterprises operated and/or owned by women enjoy an enhanced guarantee cover of 80%.
 Eligibility:
 The scheme is open to both existing Micro, Small, and Service Entrepreneurs, as well as aspiring entrepreneurs. To avail assistance : Apply through Member Lending Institutions (MLIs- Banks and NBFCs).
-List of MLIs are available at Link
+List of MLIs are available at http://www.cgtmse.in
 
  2.4. Micro & Small Enterprises Cluster Development Programme (MSE-CDP)
 Overview:
@@ -173,13 +173,13 @@ Grant will be restricted to 70% of the cost of the Project of maximum Rs. 20.00 
 Eligibility:
 The scheme is open to Micro and Small Enterprises (MSEs) seeking to improve their sustainability and growth.
 Special category projects located in specific regions, including North-East & Hilly States, Island territories, Aspirational Districts/LWE affected Districts, and Clusters with more than 50% ownership by (a) Micro/Village units, (b) Women-owned units, and (c) SC/ST units, enjoy higher grant percentages.
-For more information : Link
+For more information : https://cluster.dcmsme.gov.in/
 
  2.5. Procurement & Marketing Support to MSMEs Overview:
 The primary objective of this scheme is to boost the marketability of products and services in the Micro, Small, and Medium Enterprises (MSME) sector. It fosters new market access initiatives, spreads awareness, and educates MSMEs on various marketing-related topics. The scheme also focuses on promoting awareness about trade fairs, digital advertising, e-marketing, GST, the GeM portal, public procurement policy, and related subjects.
 Nature of Assistance-Financial assistance:
 Participation of Individual MSEs in domestic trade fairs/exhibition: 80% of space rent paid for general category units and 100% for SC/ST/women/NER/PH units limited to Rs. 1.5 lakh for class A city; Rs 1.00 Lakh for class B/J&K/NER/Hilly states and for other cities Rs 0.80 Lakhs -or actual whichever is less.
-For more details: Link
+For more details: https://msme.gov.in/sites/default/files/Guidelines_PMS.pdf
 
  2.6. Public Procurement Policy (PPP) for MSEs Overview:
 The primary objective of the Public Procurement Policy for Micro and Small Enterprises (MSEs) is to provide crucial marketing support to Micro and Small Enterprises (MSEs) in India. It aims to encourage and facilitate the procurement of products and services from MSEs by Central Ministries, Departments, and Central Public Sector Enterprises (CPSEs).
@@ -195,7 +195,7 @@ MSEs.
 Eligibility
 ● The Public Procurement Policy is applicable to goods and services produced by Micro and Small Enterprises (MSEs).
 ● This policy does not cover traders, sole agents, distributors, or works contracts.
-● For more information : Link
+● For more information : https://msme.gov.in/public-procurement-policy
 
  3. SCHEMES UNDER DIC
 
@@ -212,7 +212,7 @@ additional 10% support, limited to Rs 10 lakhs.
 support, limited to Rs 10 lakhs.
 ● Total Eligible Assistance : The total eligible assistance for an enterprise is limited to Rs 30 lakhs.
 Eligibility:
-All MSMEs engaged in manufacturing activities are eligible for assistance under the ESS. For more information : Click
+All MSMEs engaged in manufacturing activities are eligible for assistance under the ESS. For more information : https://industry.kerala.gov.in/index.php/schemes-mainmenu/entrepreneur-support-scheme-schemes
 
  3.2. Scheme for Margin Money Grant To Nano Units
 Overview:
@@ -232,7 +232,7 @@ Financial Assistance:
 contribution shall be 20%.
 Procedure:
 ● Applicants should submit their applications to the Assistant District Industries Officer or the concerned Taluk Industries Office with all supporting documents, including the sanction letter with a recommendation from the bank.
-● A copy of the passbook showing beneficiary contributions should be submitted along with the application. To know more about: Link
+● A copy of the passbook showing beneficiary contributions should be submitted along with the application. To know more about: https://industry.kerala.gov.in/index.php/schemes-mainmenu/margin-money-grand-to-nano-units-schemes#:~:text=Margin%20Money%20Grant%20to%20Nano%20Units%20is%20a%20loan%20linked,any%20type%20of%20value%20addition.
 
  3.3. Assistance Scheme for Handicrafts Artisans (ASHA)
 Overview:
@@ -251,7 +251,7 @@ investments as FCI.
 relevant authorities.
 - No application fee is charged for seeking assistance under ASHA.
 Eligibility:
-- Enrolled as an artisan/craftsman under the office of the Development Commissioner (Handicrafts) or Surabhi, HDCK Ltd., KELPALM, KSBC, KADCO. For more information: Link
+- Enrolled as an artisan/craftsman under the office of the Development Commissioner (Handicrafts) or Surabhi, HDCK Ltd., KELPALM, KSBC, KADCO. For more information: https://industry.kerala.gov.in/index.php/schemes-mainmenu/asha-schemes
   
  OTHER SCHEMES
 
@@ -273,7 +273,7 @@ services, or trading sector.
 Women Entrepreneurs.
 - Borrowers should not have any outstanding defaults with any bank or financial institution.
 - Eligible Activities: Greenfield projects in Manufacturing, Service, or Trading sectors.
-- For more information: Link
+- For more information: https://www.standupmitra.in/
 
  5. We- Mission (Kerala State Industrial Development Corporation)
 Overview:
@@ -290,7 +290,7 @@ Eligibility Criteria:
 - Eligibility criteria may vary for different components of the WE Mission scheme.
 - Women entrepreneurs in the state of Kerala.
 - Export-oriented units in the garment manufacturing and allied industries.
-- For more information:Link
+- For more information: https://www.ksidc.org/women-entrepreneurship/
 
  6. Vanamithra – Integrated Skill Development Centre for Tribal Women (KSWDC) Overview:
 The Kerala State Women's Development Corporation (KSWDC) is dedicated to reaching out to the marginalised section of Scheduled Tribe (ST) women in the state. As part of this commitment, KSWDC is initiating the establishment of Day Care and Integrated Skill Development Centers for ST Women. This pilot program will be launched in two tribal settlements within Kerala.
@@ -298,7 +298,7 @@ These centres are envisioned as skill hubs, focusing on enhancing the skills of 
 Additionally, these centres will offer maternity and child care facilities to support and enhance their services. This comprehensive approach includes maternity care, nutritional support for pregnant and lactating mothers, awareness campaigns, medical camps, first aid services, ambulance support, and provision of day care and child care facilities.
 Eligibility:
 - The initiative is specifically designed for Scheduled Tribe (ST) women residing in tribal settlements within Kerala.
-- For more information: Link
+- For more information: https://kswdc.org/public-utility-services/
 
  7. Entrepreneurship Development Programme (EDP) Overview:
 The Kerala State Women's Development Corporation Ltd (KSWDC) is dedicated to the economic empowerment of widows in the state. To achieve this goal, KSWDC is proposing an Entrepreneurship Training Program for widows aged between 18 and 55 years. This initiative aims to provide financial and consultative support to widows, enabling them to initiate and manage their own business ventures.
@@ -306,7 +306,7 @@ The Entrepreneurship Development Programme (EDP) is designed to enhance the entr
 The scheme helps to create awareness on various aspects of Entrepreneurship . It provides Loan assistance for widows to start new ventures thereby ensuring economic empowerment of widows through this scheme.
 Eligibility:
 - Widows within the age group of 18 to 55 years.
-- For more information: Link
+- For more information: https://kswdc.org/public-utility-services/
 
  8. Saranya(Self Employment Scheme for the destitute Women) Overview:
 SARANYA is a self-employment scheme introduced by the Kerala State Government under National Employment Service (Employment Exchange),Kerala. It aims to uplift the most marginalised women in the state, including widows, divorced individuals, deserted women, spinsters above the age of 30, and unwedded mothers of Scheduled Tribes, Differently-abled individuals, and wives of bedridden patients.
@@ -322,14 +322,14 @@ Eligibility:
 - Applicants must be registered with the Employment Exchange.
 - The project report and income certificate from the village officer are required for application.
 Application Process:
-Obtain free application forms from the relevant Employment Exchange where you are registered and Submit the application along with necessary documents, including the detailed project report and income certificate. For more information: Link
+Obtain free application forms from the relevant Employment Exchange where you are registered and Submit the application along with necessary documents, including the detailed project report and income certificate. For more information: https://employment.kerala.gov.in/en/saranya/
  
  9. Kudumbasree - Micro Enterprise Support Overview:
 Micro Enterprise promotion and development is one of the significant strategies of Kudumbashree Mission to facilitate economic empowerment of the poor. The Mission developed specific strategies analysing the requirements of enterprises. This constitutes training, partial financial support, marketing support and hand holding support to the enterprises. These kinds of support are applicable for both existing micro enterprises and new ones.
 Eligibility:
 - Eligibility criteria may vary depending on specific programs and initiatives within the Kudumbasree mission.
 - Generally, Kudumbasree aims to support women, individuals and families from economically disadvantaged backgrounds who are
-interested in starting or growing micro-enterprises. For more information: Link
+interested in starting or growing micro-enterprises. For more information: https://kudumbashree.org/pages/653
 
  10. Women Entrepreneurship Platform (WEP) Overview:
 The Women Entrepreneurship Platform (WEP) is a comprehensive and inclusive initiative under Niti Ayog Ministry aimed at supporting and empowering women entrepreneurs in India. It provides a platform for women to access resources, networks, and opportunities to start, scale, and succeed in their entrepreneurial endeavours.
@@ -342,4 +342,4 @@ Key Features:
 - Policy Advocacy: It advocates for policies that promote women's entrepreneurship and gender-inclusive business environments.
 Eligibility:
 - The eligibility criteria for WEP participation may vary based on specific programs and initiatives within the platform.
-- For more information: Link
+- For more information: https://wep.gov.in/
