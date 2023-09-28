@@ -45,6 +45,7 @@ def load_llm() -> OpenAI:
     This function loads the OpenAI LLM
     """
     llm = OpenAI(
+        model="gpt-4",
         openai_api_key=OPENAI_API_KEY,
         temperature=0.1,
     )
@@ -63,7 +64,7 @@ def retrival_qa_chain(
         llm=llm,
         retriever=db.as_retriever(
             search_kwargs={
-                "k": 2
+                "k": 5
             },
         ),
         memory=memory,
