@@ -55,14 +55,12 @@ def get_txt_docs():
             loader_cls=TextLoader
         )
         documents = loader.load()
-        splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=50
-        )
+        splitter = SpacyTextSplitter()
         docs = splitter.split_documents(documents)
     except Exception as e:
         print(traceback.format_exc())
         docs = []
+    print(docs)
     return docs
 
 
@@ -165,7 +163,8 @@ def update_vector_db(
 
 
 if __name__ == "__main__":
-    docs = get_pdf_docs()
+    #docs = get_pdf_docs()
+    docs = []
     docs.extend(get_url_docs(urls))
     docs.extend(get_txt_docs())
     db = create_vector_db(docs)
