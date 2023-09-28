@@ -32,7 +32,7 @@ async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
     history = get_redis_value(chat_id)
     if not history:
         history = []
-        set_redis(chat_id, history, expire=1800)
+        set_redis(chat_id, history, expire=600)
     response, history = chat(text, messages=history)
     set_redis(chat_id, history)
     

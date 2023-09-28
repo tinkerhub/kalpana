@@ -5,7 +5,7 @@ def get_redis():
     redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
     return redis_client
 
-def set_redis(key, value, expire=1800):
+def set_redis(key, value, expire=600):
     redis_client = get_redis()
     value = json.dumps(value)
     current_expiration = redis_client.ttl(key)
