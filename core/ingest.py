@@ -22,9 +22,6 @@ embeddings = OpenAIEmbeddings(
     openai_api_key=os.environ.get('OPENAI_API_KEY')
 )
 
-with open("data/dummy-lp.json") as f:
-    learning_paths = json.load(f)
-
 with open("data/urls.txt") as f:
     tinkerhub_urls = f.readlines()
     tinkerhub_urls = [url.strip() for url in tinkerhub_urls]
@@ -175,4 +172,3 @@ if __name__ == "__main__":
     docs.extend(get_pdf_docs())
     docs.extend(get_txt_docs())
     db = create_vector_db(docs)
-    db.add_texts(get_learning_path_docs(learning_paths))
