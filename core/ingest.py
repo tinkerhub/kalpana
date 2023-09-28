@@ -3,6 +3,8 @@ from langchain.document_loaders import (
     PyPDFLoader, 
     DirectoryLoader, 
     UnstructuredURLLoader,
+    UnstructuredPDFLoader,
+    PyMuPDFLoader,
     TextLoader,
     GitLoader
 )
@@ -23,23 +25,22 @@ embeddings = OpenAIEmbeddings(
 )
 
 with open("data/urls.txt") as f:
-    tinkerhub_urls = f.readlines()
-    tinkerhub_urls = [url.strip() for url in tinkerhub_urls]
+    urls = f.readlines()
+    urls = [url.strip() for url in urls]
 
 
-def get_tinkerhub_docs(tinkerhub_urls):
+def get_url_docs(urls):
     """
     This function gets the docs from
     the tinkerhub web pages.
     """
     docs = []
-    for url in tinkerhub_urls:
+    for url in urls:
         loader = UnstructuredURLLoader([url])
         documents = loader.load()
         splitter = SpacyTextSplitter()
         texts = splitter.split_documents(documents)
         docs.extend(texts)
-    print(docs)
     return docs
 
 def get_txt_docs():
@@ -74,14 +75,10 @@ def get_pdf_docs():
         loader = DirectoryLoader(
             DATA_PATH, 
             glob='*.pdf', 
-            loader_cls=PyPDFLoader
+            loader_cls=PyMuPDFLoader
         )
         documents = loader.load()
-        print(documents[0])
-        splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=50
-        )
+        splitter = SpacyTextSplitter()
         docs = splitter.split_documents(documents)
     except Exception:
         print(traceback.format_exc())
@@ -167,7 +164,7 @@ def update_vector_db(
 
 
 if __name__ == "__main__":
-    docs = get_tinkerhub_docs(tinkerhub_urls)
-    docs.extend(get_pdf_docs())
+    docs = get_pdf_docs()
+    docs.extend(get_url_docs(urls))
     docs.extend(get_txt_docs())
     db = create_vector_db(docs)
