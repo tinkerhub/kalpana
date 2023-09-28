@@ -11,9 +11,6 @@ import os
 
 import dotenv
 
-with open("data/dummy-lp.json") as f:
-    learning_paths = json.load(f)
-
 dotenv.load_dotenv("ops/.env")
 
 DB_FAISS_PATH = os.getenv('DB_FAISS_PATH')
