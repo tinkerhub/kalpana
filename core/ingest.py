@@ -167,6 +167,6 @@ def update_vector_db(
 
 if __name__ == "__main__":
     docs = get_pdf_docs()
-    docs.extend(get_url_docs(urls))
+    #docs.extend(get_url_docs(urls))
     #docs.extend(get_txt_docs())
     db = create_vector_db(docs)
