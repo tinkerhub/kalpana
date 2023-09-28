@@ -78,11 +78,13 @@ def get_pdf_docs():
             loader_cls=PyMuPDFLoader
         )
         documents = loader.load()
-        splitter = SpacyTextSplitter()
-        docs = splitter.split_documents(documents)
+        #splitter = SpacyTextSplitter()
+        #docs = splitter.split_documents(documents)
+        docs = documents
     except Exception:
         print(traceback.format_exc())
         docs = []
+    print(docs)
     return docs
 
 def get_pdf_doc(filename: str):
