@@ -6,9 +6,10 @@ from telegram.ext import (
     ContextTypes, 
     MessageHandler,
     CommandHandler, 
-    filters,
+    filters
 )
 from core.db import set_redis, get_redis_value
+from utils.format import split_into_sentences
 import os
 import dotenv
 
@@ -35,8 +36,12 @@ async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
         set_redis(chat_id, history, expire=600)
     response, history = chat(text, messages=history)
     set_redis(chat_id, history)
-    
-    await context.bot.send_message(chat_id=chat_id, text=response)
+    texts = split_into_sentences(response)
+    for text in texts:
+        try:
+            await context.bot.send_message(chat_id=chat_id, text=response)
+        except Exception as e:
+            pass
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(token).read_timeout(30).write_timeout(30).build()
