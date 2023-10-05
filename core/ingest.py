@@ -80,7 +80,7 @@ def get_pdf_docs():
         )
         documents = loader.load()
         splitter = RecursiveCharacterTextSplitter(
-            chunk_size=4 * 1024, 
+            chunk_size=8 * 1024, 
             chunk_overlap=200
         )
         docs = splitter.split_documents(documents)
@@ -169,7 +169,7 @@ def update_vector_db(
 
 
 if __name__ == "__main__":
-    docs = get_txt_docs()
+    docs = get_pdf_docs()
     #docs.extend(get_url_docs(urls))
     #docs.extend(get_txt_docs())
     db = create_vector_db(docs)

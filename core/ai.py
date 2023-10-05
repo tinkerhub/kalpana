@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain, LLMChain
 from langchain.memory import ConversationBufferMemory
 from langchain.memory.chat_message_histories.in_memory import ChatMessageHistory
@@ -40,18 +40,19 @@ def set_custom_prompt() -> PromptTemplate:
     )
     return prompt
 
-def load_llm() -> OpenAI:
+def load_llm() -> ChatOpenAI:
     """
     This function loads the OpenAI LLM
     """
-    llm = OpenAI(
+    llm = ChatOpenAI(
+        model="gpt-3.5-turbo-16k",
         openai_api_key=OPENAI_API_KEY,
         temperature=0.4,
     )
     return llm
 
 def retrival_qa_chain(
-        llm: OpenAI, 
+        llm: ChatOpenAI, 
         prompt: str, 
         db: FAISS, 
         memory: ConversationBufferMemory
