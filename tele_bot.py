@@ -40,7 +40,7 @@ async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
     texts = split_into_sentences(response)
     for text in texts:
         try:
-            await context.bot.send_message(chat_id=chat_id, text=response)
+            await context.bot.send_message(chat_id=chat_id, text=text)
         except Exception as e:
             pass
 
