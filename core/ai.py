@@ -64,7 +64,7 @@ def retrival_qa_chain(
         llm=llm,
         retriever=db.as_retriever(
             search_kwargs={
-                "k": 5
+                "k": 6
             },
         ),
         memory=memory,

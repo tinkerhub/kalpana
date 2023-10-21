@@ -9,7 +9,7 @@ from telegram.ext import (
     filters
 )
 from core.db import set_redis, get_redis_value
-from utils.format import split_into_sentences
+from utils.format import split_into_sentences, wait_response
 import os
 import dotenv
 
@@ -29,7 +29,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
     chat_id = update.effective_chat.id
-    print(chat_id)
+    wait = wait_response()
+    await context.bot.send_message(chat_id=chat_id, text=wait)
     history = get_redis_value(chat_id)
     if not history:
         history = []
