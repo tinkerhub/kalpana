@@ -24,7 +24,7 @@ logging.basicConfig(
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
-    await context.bot.send_message(chat_id=chat_id, text="Hey, I am Kalpana, an AI bot created by TinkerHub Foundation for kerala startup mission's women startup summit 5.0 You will answer questions about KSUM women startup summit, kerala startup mission schemes and Kerala government startup schemes :)")
+    await context.bot.send_message(chat_id=chat_id, text="Hey, I am Kalpana, an AI bot created by TinkerHub Foundation for kerala startup mission. I will answer questions about various women startup schemes by KSUM and govt of India :) For more information go to https://bit.ly/KSUMWomenBooklet!")
 
 async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
