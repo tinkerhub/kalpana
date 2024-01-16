@@ -1,9 +1,56 @@
-import uvicorn
-from fastapi import FastAPI
-from core.routes import router
-app = FastAPI()
+import logging
+from core.ai import chat, audio_chat
+from telegram import Update
+from telegram.ext import (
+    ApplicationBuilder,
+    ContextTypes, 
+    MessageHandler,
+    CommandHandler, 
+    filters,
+)
+import os
+import dotenv
+import tempfile
 
-app.include_router(router.router)
+dotenv.load_dotenv("ops/.env")
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+token = os.getenv('TELEGRAM_BOT_TOKEN')
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    chat_id = update.effective_chat.id
+    await context.bot.send_message(chat_id=chat_id, text="Hello I am Kalpana, KSUM's AI Bot to answer your questions about various women in entrepreneurship programs and schemes")
+
+async def respond(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text
+    chat_id = update.effective_chat.id
+    print(chat_id)
+    response, history = chat(chat_id, text)
+    await context.bot.send_message(chat_id=chat_id, text=response)
+
+async def respond_audio(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    audio_file = await context.bot.get_file(update.message.voice.file_id)
+
+    # Use a temporary file
+    with tempfile.NamedTemporaryFile(suffix='.ogg', delete=True) as temp_audio_file:
+        await audio_file.download_to_drive(custom_path=temp_audio_file.name)
+        chat_id = update.effective_chat.id
+        print(chat_id)
+        response, history = audio_chat(chat_id, audio_file=open(temp_audio_file.name, "rb"))
+        await context.bot.send_message(chat_id=update.effective_chat.id, text=response)
+
+
+
+if __name__ == '__main__':
+    application = ApplicationBuilder().token(token).read_timeout(30).write_timeout(30).build()
+    start_handler = CommandHandler('start', start)
+    response_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), respond)
+    audio_handler = MessageHandler(filters.VOICE & (~filters.COMMAND), respond_audio)
+    application.add_handler(response_handler)
+    application.add_handler(start_handler)
+    application.add_handler(audio_handler)
+    application.run_polling()
