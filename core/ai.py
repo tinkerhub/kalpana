@@ -1,123 +1,78 @@
-from langchain.prompts import PromptTemplate
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chat_models import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain, LLMChain
-from langchain.memory import ConversationBufferMemory
-from langchain.memory.chat_message_histories.in_memory import ChatMessageHistory
-from langchain.schema import messages_from_dict, messages_to_dict
+from openai import OpenAI
+from utils.openai_utils import (
+    create_thread,
+    upload_message,
+    get_run_status,
+    get_assistant_message,
+    create_assistant,
+    transcribe_audio
+)
+from utils.redis_utils import (
+    get_redis_value,
+    set_redis,
+)
 import json
+import time
 import os
 
-import dotenv
+from dotenv import load_dotenv
 
-dotenv.load_dotenv("ops/.env")
-
-DB_FAISS_PATH = os.getenv('DB_FAISS_PATH')
-
-MAIN_PROMPT_PATH = os.environ.get('MAIN_PROMPT_PATH')
-
-OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
-
-with open(MAIN_PROMPT_PATH) as f:
-    system = "\n".join(f.readlines())
-
-custom_prompt_template = system
-
-memory = ConversationBufferMemory(
-    memory_key='chat_history', 
-    return_messages=True, 
-    output_key='answer'
+load_dotenv(
+    dotenv_path="ops/.env",
 )
 
-def set_custom_prompt() -> PromptTemplate:
-    """
-    This function creates a custom prompt
-    """
-    prompt = PromptTemplate(
-        template=custom_prompt_template,
-        input_variables=["context", "question"]
-    )
-    return prompt
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-def load_llm() -> ChatOpenAI:
-    """
-    This function loads the OpenAI LLM
-    """
-    llm = ChatOpenAI(
-        model="gpt-3.5-turbo-16k",
-        openai_api_key=OPENAI_API_KEY,
-        temperature=0.4,
-    )
-    return llm
+assistant_id = get_redis_value("assistant_id")
 
-def retrival_qa_chain(
-        llm: ChatOpenAI, 
-        prompt: str, 
-        db: FAISS, 
-        memory: ConversationBufferMemory
-) -> ConversationalRetrievalChain:
-    """
-    This function creates a ConversationalRetrievalChain
-    """
-    qa_chain = ConversationalRetrievalChain.from_llm(
-        llm=llm,
-        retriever=db.as_retriever(
-            search_kwargs={
-                "k": 6
-            },
-        ),
-        memory=memory,
-        combine_docs_chain_kwargs={'prompt': prompt}
-    )
-    return qa_chain
+client = OpenAI(
+    api_key=openai_api_key,
+)
 
-emebddings = OpenAIEmbeddings(
-        openai_api_key=OPENAI_API_KEY
-    )
-db = FAISS.load_local(DB_FAISS_PATH, emebddings)
-llm = load_llm()
+assistant = create_assistant(client, assistant_id)
 
-qa_prompt = set_custom_prompt()
+def chat(chat_id, input_message):
+    history = get_redis_value(chat_id)
+    if history == None:
+        history = {
+            "thread_id": None,
+            "run_id": None,
+            "status": None,
+        }
+    else:
+        history = json.loads(history)
+    thread_id = history.get("thread_id")
+    run_id = history.get("run_id")
+    status = history.get("status")
 
-def compose_memory(messages: list) -> ConversationBufferMemory:
-    """
-    This function composes a memory
-    """
-    messages = messages_from_dict(messages)
-    chat_history = ChatMessageHistory(
-        messages=messages
-    )
-    memory = ConversationBufferMemory(
-            chat_memory=chat_history,
-            memory_key='chat_history',
-            return_messages=True,
-            output_key='answer'
-    )
-    return memory
+    try:
+        run = client.beta.threads.runs.retrieve(thread_id, run_id)
+    except Exception as e:
+        run = None
+    try:
+        thread = client.beta.threads.retrieve(thread_id)
+    except Exception as e:
+        thread = create_thread(client)
 
-def normal_chat(query: str, messages: list) -> tuple:
-    """
-    This function returns the answer and messages
-    """
-    memory = compose_memory(messages)
-    qa = retrival_qa_chain(
-        llm, qa_prompt, db, memory
-    )
-    result = qa(
-        {'question': query}
-    )
-    answer = result.get("answer")
-    messages = messages_to_dict(
-        qa.memory.chat_memory.messages
-    )
-    return answer, messages
+    
+    run = upload_message(client, thread.id, input_message, assistant.id)
+    run, status = get_run_status(run, client, thread)
 
+    assistant_message = get_assistant_message(client, thread.id)
 
-def chat(query, messages):
-    answer, messages = normal_chat(query, messages)
-    return answer, messages
+    history = {
+        "thread_id": thread.id,
+        "run_id": run.id,
+        "status": status,
+    }
+    history = json.dumps(history)
+    set_redis(chat_id, history)
+
+    return assistant_message, history
     
 
-
-
+def audio_chat(chat_id, audio_file):
+    input_message = transcribe_audio(audio_file, client)
+    print(f"The input message is : {input_message}")
+    assistant_message, history =  chat(chat_id, input_message)
+    return assistant_message, history    
